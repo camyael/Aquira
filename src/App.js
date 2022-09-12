@@ -7,10 +7,10 @@ function App() {
     <>
       <NavBar />
       <section className="catalogo">
-        <Products producto="Mascara de Pestaña"/>
-        <Products producto="Delineador"/>
-        <Products producto="Labial matte"/>
-        <Products producto="Rubor"/>
+        <Products product="Mascara de Pestaña" stock={2}/>
+        <Products product="Delineador" stock={4}/>
+        <Products product="Labial matte" stock={5}/>
+        <Products product="Rubor" stock={8}/>
       </section>
     </>
   );

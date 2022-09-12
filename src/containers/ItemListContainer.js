@@ -1,7 +1,10 @@
-const Products = (props) => {
+import ItemCount from "../components/ItemCount"
+
+const Products = ({product, stock}) => {
     return (
         <div className="catalogo_div">
-            <h2>{props.producto}</h2>
+            <h2>{product}</h2>
+            <ItemCount stock={stock}/>
         </div>
     )
 }
