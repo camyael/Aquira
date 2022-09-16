@@ -14,9 +14,9 @@ const productsOBJ = [
     stock: 5
     },
     {id: 3,
-    title: "Labial matte",
+    title: "Labial matte Generation G de Glossier",
     price: "$2000",
-    description: "gg",
+    description: "El nuevo labial de la Marca Glossier da el aspecto y el acabado de un lápiz labial recién borrado, desgastado. La formula construible se desliza facil y uniformemente, sin necesidad de espejo.",
     pictureURL: "https://images.ctfassets.net/p3w8f4svwgcg/3zdGoeX0mbYs4nGYz6PtN6/0c44dd4dd66c3a81ea6dac3601d280b5/Global_-_GenG_-_1.jpg?w=1400&q=80&fm=webp",
     stock: 8
     }

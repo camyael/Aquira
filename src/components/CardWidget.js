@@ -1,7 +1,7 @@
 const Card = () => {
     return(
-        <div>
-            <img src="https://img.icons8.com/ios-glyphs/30/FAB005/shopping-cart-loaded.png" alt="card"/>
+        <div className="CardWidget">
+            <img src="https://img.icons8.com/glyph-neue/64/3f4757/shopping-cart.png" alt="card"/>
         </div>
     )
 }
