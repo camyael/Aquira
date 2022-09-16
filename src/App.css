@@ -7,9 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: cornsilk;
+  background-color: #E9EDF8;
   font-weight: bolder;
-  color: #785a38;
+  color: #637A97;
   padding: 12px 50px;
 }
 
@@ -54,6 +54,15 @@
   width: 200px;
 }
 
+.ItemDetail{
+  display: flex;
+  justify-content: center;
+}
+
+.ItemDetail img {
+  width: 400px;
+}
+
 /* CONTROLES DE LAS CARDS */
 
 .ItemCount{
@@ -65,12 +74,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #785a38;
 }
 
 .controlsItem button {
   padding: 2px 10px;
   font-weight: bolder;
   font-size: 1.3rem;
+  border: none
 }
 
 .addToCart {
