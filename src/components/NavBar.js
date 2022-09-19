@@ -1,17 +1,18 @@
 import Card from "./CardWidget"
+import { Link } from "react-router-dom"
 
 const NavBar = () => {
     return (
         <>
             <header id="header">
                 <h1>
-                    Beauty
+                    <Link to="/">Beauty</Link>
                 </h1>
                 <div className="navbar">
                     <ul>
-                        <li>Productos</li>
-                        <li>Skincare</li>
-                        <li>Maquillaje</li>
+                        <li><Link to="/">Productos</Link></li>
+                        <li><Link to="/category/2">Skincare</Link></li>
+                        <li><Link to="/category/1">Maquillaje</Link></li>
                     </ul>
                 </div>
                 <Card />

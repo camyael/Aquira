@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react"
 import ItemDetail from "../components/ItemDetail"
-import productsOBJ from "../utils/Products"
+import Products from "../utils/Products"
+import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () => {
     const [productArray, setproductArray] = useState([])
+    const { id } = useParams()
 
     const getItem = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(productsOBJ[2])
+                resolve(Products.find(item => item.id == id))
             }, 2000)
         })
     }
 
+
+
     useEffect(() => {
         getItem()
-        .then(response => setproductArray(response))
-        .catch(() => console.log("Error"))
+            .then(response => setproductArray(response))
+            .catch(() => console.log("Error"))
     })
 
     return (

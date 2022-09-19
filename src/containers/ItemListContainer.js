@@ -1,24 +1,40 @@
 import { useState, useEffect } from "react"
-import productsOBJ from "../utils/Products"
+import Products from "../utils/Products"
 import ItemList from "../components/ItemList"
+import { useParams } from "react-router-dom"
 
-const Products = () => {
+const ItemListContainer = () => {
 
     const [productsArray, setproductsArray] = useState([])
+    const { id } = useParams()
 
     const List = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(productsOBJ)
+                resolve(Products)
+            }, 2000)
+        })
+    }
+
+    const Category = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(Products.filter(item => item.categoryID == id))
             }, 2000)
         })
     }
 
     useEffect(() => {
-        List()
-            .then(response => setproductsArray(response))
-            .catch(() => console.log("Error"))
-    })
+        if (id) {
+            Category()
+                .then(response => setproductsArray(response))
+                .catch(() => console.log("Error"))
+        } else {
+            List()
+                .then(response => setproductsArray(response))
+                .catch(() => console.log("Error"))
+        }
+    }, [id])
 
     return (
         <div className="ItemList">
@@ -27,4 +43,4 @@ const Products = () => {
     )
 }
 
-export default Products
+export default ItemListContainer
