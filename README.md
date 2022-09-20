@@ -3,8 +3,8 @@ Beauty es un ___e-commerce___ ficticio, que simula un emprendimiento de ventas d
 
 ## Características
 * Carrito
-* Filtrado por productos
 * Catálogo de Compra
+* Filtrado por productos
 
 
 # Getting Started with Create React App
