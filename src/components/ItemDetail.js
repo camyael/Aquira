@@ -1,6 +1,16 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => {
+    const [goToCart , setgoToCart] = useState(false)
+
+    const onAdd = (cantidad) => {
+        alert(`Agregaste ${cantidad} producto/s`)
+        setgoToCart(true)
+    }
+
+
     return (
         <>
             <div className="pictureURL">
@@ -11,8 +21,12 @@ const ItemDetail = ({item}) => {
                 <h3 className="ItemDescription">{item.description}</h3>
                 <h4 className="ItemPrice">{item.price}</h4>
 
-                <div>
-                    <ItemCount stock={item.stock}/>
+                <div className="ProductStock">
+                {
+                    goToCart
+                    ? <Link to="/cart"><button className="goToCart">Ir al Carrito</button></Link>
+                    : <ItemCount stock={item.stock} onAdd={onAdd}/> 
+                }
                 </div>
             </div>
         </>

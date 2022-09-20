@@ -10,7 +10,8 @@ const ItemDetailContainer = () => {
     const getItem = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(Products.find(item => item.id == id))
+                // eslint-disable-next-line 
+                resolve(Products.find(item => item.id == id)) 
             }, 2000)
         })
     }
