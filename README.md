@@ -1,3 +1,12 @@
+## Beauty: E-Commerce en React
+Beauty es un ___e-commerce___ ficticio, que simula un emprendimiento de ventas de productos importados de belleza, para el Proyecto Final del curso de ___React Js___ de CoderHouse.
+
+## Características
+* Carrito
+* Filtrado por productos
+* Catálogo de Compra
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
