@@ -5,8 +5,7 @@ import ItemCount from "./ItemCount"
 const ItemDetail = ({item}) => {
     const [goToCart , setgoToCart] = useState(false)
 
-    const onAdd = (cantidad) => {
-        alert(`Agregaste ${cantidad} producto/s`)
+    const onAdd = (qnty) => {
         setgoToCart(true)
     }
 
