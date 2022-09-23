@@ -1,4 +1,4 @@
-import Card from "./CardWidget"
+import Cart from "./CartWidget"
 import { Link } from "react-router-dom"
 
 const NavBar = () => {
@@ -15,7 +15,7 @@ const NavBar = () => {
                         <li><Link to="/category/1">Maquillaje</Link></li>
                     </ul>
                 </div>
-                <Card />
+                <Cart />
             </header>
         </>
     );

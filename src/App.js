@@ -7,7 +7,8 @@ import ItemListContainer from './containers/ItemListContainer';
 function App() {
   return (
     <>
-      <BrowserRouter>
+     
+     <BrowserRouter>
         <NavBar />
         
         <Routes>
