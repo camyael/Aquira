@@ -15,22 +15,19 @@ body {
 }
 
 #header{
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #F0F4FD;
   font-weight: bolder;
   color: #3F4757;
-  padding: 12px 50px;
+  padding: 12px 0px;
 }
 
-#header h1 {
+.logo h1 {
   font-style: italic;
   font-weight: bolder;
-}
-
-.navbar {
-  width: 80%;
 }
 
 .navbar ul {
@@ -41,7 +38,7 @@ body {
 }
 
 .navbar li {
-  margin: 0 50px;
+  margin: 0px 25px;
   list-style-type: none;
 }
 
@@ -82,7 +79,12 @@ body {
 
 .divItem h2 {
   font-size: 1.2rem;
-  padding: 20px 2px 40px 2px;
+  padding: 20px 2px 30px 2px;
+}
+
+.divItem h3 {
+  font-size: 1.1rem;
+  padding: 10px 2px 30px 2px;
 }
 
 .itemVerMas {

@@ -5,9 +5,11 @@ const NavBar = () => {
     return (
         <>
             <header id="header">
-                <h1>
-                    <Link to="/">Beauty</Link>
-                </h1>
+                <div className="logo">
+                    <h1>
+                        <Link to="/">Beauty</Link>
+                    </h1>
+                </div>
                 <div className="navbar">
                     <ul>
                         <li><Link to="/">Productos</Link></li>
@@ -15,7 +17,12 @@ const NavBar = () => {
                         <li><Link to="/category/1">Maquillaje</Link></li>
                     </ul>
                 </div>
-                <Cart />
+                <div className="navbar">
+                    <ul>
+                        <li>Nosotros</li>
+                        <li><Cart /></li>
+                    </ul>
+                </div>
             </header>
         </>
     );
