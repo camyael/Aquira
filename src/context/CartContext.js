@@ -11,10 +11,16 @@ const CartContextProvider = ( ({children})  => {
         setcartItem([...cartItem, product])
     }
 
+    const removeItem = (id) => {
+        const remove = cartItem.filter((product) => product.id !== id);
+        setcartItem(remove)
+    }
+
     return(
         <CartContext.Provider value={{
             cartItem,
-            addItem}}>
+            addItem,
+            removeItem}}>
             {children}
         </CartContext.Provider>
     )

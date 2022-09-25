@@ -7,7 +7,7 @@ const ItemDetail = ({item}) => {
     const [goToCart , setgoToCart] = useState(false)
     const { addItem } = useContext(CartContext)
 
-    const onAdd = (qnty) => {
+    const onAdd = () => {
         setgoToCart(true)
         addItem(item)
     }
