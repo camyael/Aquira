@@ -1,6 +1,8 @@
 ## Beauty: E-Commerce en React
 Beauty es un ___e-commerce___ ficticio, que simula un emprendimiento de ventas de productos importados de belleza, para el Proyecto Final del curso de ___React Js___ de CoderHouse. Se utilizó React Hooks para el manejo de estados y para la navegación y enrutados, React Router Dom.
 
+* [Demo de la página](https://aquira.netlify.app/)
+
 ![](e-commerce.gif)
 
 ## Características
