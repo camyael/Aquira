@@ -26,7 +26,7 @@ const ItemDetail = ({item}) => {
                 <div className="ProductStock">
                 {
                     IsInCart(item.id)
-                    ? <Link to="/cart"><button className="goToCart">Ir al Carrito</button></Link>
+                    ? <Link to="/cart"><button className="goToCart">Finalizar la compra</button></Link>
                     : <ItemCount stock={item.stock} onAdd={onAdd}/> 
                 }
                 </div>

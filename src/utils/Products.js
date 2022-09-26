@@ -25,7 +25,7 @@ const Products = [
     },
     {id: 4,
     title: "Prebase Hidratante",
-    price: "3608,50",
+    price: "3609",
     description: "La crema ligera en gel equilibra la grasa sin resecar la piel ni dejar un acabado plano y con polvo. Los poros parecen minimizados, el brillo desaparece y la piel está hidratada y feliz",
     pictureURL: "https://images.ctfassets.net/p3w8f4svwgcg/7y2VRfdXXQf9rySHPKu0F9/47de8552406c70ff12842d99c2ebf4e6/PMB_1.jpg?w=1400&q=80&fm=webp",
     stock: 10,

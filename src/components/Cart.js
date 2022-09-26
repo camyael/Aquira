@@ -1,23 +1,10 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartProd = ({product}) => {
 
     const { removeItem } = useContext(CartContext)
     
-    const [count, setCount] = useState(product.count)
-
-    const addProduct = () => {
-        if (count < product.stock) {
-            setCount(product.count += 1)
-        }
-    }
-
-    const deleteProduct = () => {
-        if (count > 1) {
-            setCount (product.count -= 1)
-        }
-    }
 
     return (
         <div className="Cart-Item">
@@ -28,11 +15,7 @@ const CartProd = ({product}) => {
                 <div>
                     <p>{product.title}</p>
                     <p>${product.price}</p>
-                    <div className="controlsItem">
-                        <button onClick={deleteProduct}>-</button>
-                        <p>Cantidad: {product.count}</p>
-                        <button onClick={addProduct}>+</button>
-                    </div>
+                    <p>Cantidad: {product.count}</p>
                     <p>Subtotal: ${product.price * product.count}</p>
                 </div>
             </div>
