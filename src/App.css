@@ -10,6 +10,11 @@ body {
   background-color: white;
 }
 
+.CardWidget:hover {
+    background: rgba(170, 170, 170, 0.762);
+    transition: 0.5s;
+}
+
 .CardWidget img{
   width: 27px;
 }
@@ -108,7 +113,7 @@ body {
   width: 250px;
   padding: 40px 23px;
   border-radius: 10px;
-  box-shadow: 10px 10px 30px 0px #3F4757;
+  box-shadow: 5px 15px 30px 0px #3f475763;
 }
 
 .divItem img {
