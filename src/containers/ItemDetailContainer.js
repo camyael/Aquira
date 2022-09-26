@@ -7,19 +7,20 @@ const ItemDetailContainer = () => {
     const [productArray, setproductArray] = useState([])
     const { id } = useParams()
 
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // eslint-disable-next-line 
-                resolve(Products.find(item => item.id == id)) 
-            }, 2000)
-        })
-    }
-
-
     useEffect(() => {
+        const getItem = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    // eslint-disable-next-line
+                    resolve(Products.find(item => item.id == id)) 
+                }, 2000)
+            })
+        }
+    
         getItem()
-            .then(response => setproductArray(response))
+            .then(response => {
+                setproductArray(response)
+            })
             .catch(() => console.log("Error"))
     })
 

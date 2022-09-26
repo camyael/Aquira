@@ -270,3 +270,9 @@ body {
 .Cart-Delete img {
   width: 20px;
 }
+
+/* <----- LOADING ----> */
+.Loading div{
+  margin: 200px auto;
+}
+
