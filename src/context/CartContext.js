@@ -29,8 +29,14 @@ const CartContextProvider = ( ({children})  => {
     const IsInCart = (id) => cartItem.some((product) => product.id === id);
 
     const PriceTotal = () => {
-        return cartItem.reduce((acc, itemCart) => acc + (itemCart.price * itemCart.count), 0)
+        return cartItem.reduce((acc, prod) => acc + (prod.price * prod.count), 0)
     }
+
+    const PriceCount = () => {
+        return cartItem.reduce((acc, prod) => acc + prod.count, 0)
+    }
+
+
 
     return(
         <CartContext.Provider value={{
@@ -39,7 +45,8 @@ const CartContextProvider = ( ({children})  => {
             removeItem,
             clear,
             IsInCart,
-            PriceTotal}}>
+            PriceTotal,
+            PriceCount}}>
             {children}
         </CartContext.Provider>
     )
