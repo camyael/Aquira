@@ -17,7 +17,6 @@ const ItemDetailContainer = () => {
     }
 
 
-
     useEffect(() => {
         getItem()
             .then(response => setproductArray(response))

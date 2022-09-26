@@ -1,17 +1,17 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => {
-    const [goToCart , setgoToCart] = useState(false)
-    const { addItem } = useContext(CartContext)
 
-    const onAdd = () => {
-        setgoToCart(true)
-        addItem(item)
+    const { addItem, IsInCart } = useContext(CartContext)
+
+    const onAdd = (count) => {
+        alert(`Agregaste ${count} productos`);
+        
+        addItem(item, count)
     }
-
 
     return (
         <>
@@ -21,11 +21,11 @@ const ItemDetail = ({item}) => {
             <div className="ProductInfo">
                 <h2 className="ItemTitle">{item.title}</h2>
                 <h3 className="ItemDescription">{item.description}</h3>
-                <h4 className="ItemPrice">{item.price}</h4>
+                <h4 className="ItemPrice">${item.price}</h4>
 
                 <div className="ProductStock">
                 {
-                    goToCart
+                    IsInCart(item.id)
                     ? <Link to="/cart"><button className="goToCart">Ir al Carrito</button></Link>
                     : <ItemCount stock={item.stock} onAdd={onAdd}/> 
                 }
