@@ -10,11 +10,6 @@ body {
   background-color: white;
 }
 
-.CardWidget:hover {
-    background: rgba(170, 170, 170, 0.762);
-    transition: 0.5s;
-}
-
 .CardWidget img{
   width: 27px;
 }

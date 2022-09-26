@@ -5,6 +5,7 @@ const CartProd = ({product}) => {
 
     const { removeItem } = useContext(CartContext)
     
+
     return (
         <div className="Cart-Item">
             <div className="Cart-Product">

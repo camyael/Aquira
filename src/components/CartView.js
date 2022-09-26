@@ -3,7 +3,7 @@ import { CartContext } from "../context/CartContext"
 import CartProd from "./Cart"
 
 const CartView = (() => {
-    const { cartItem, clear, totalPrice } = useContext(CartContext)
+    const { cartItem, clear, PriceTotal } = useContext(CartContext)
 
     console.log(cartItem)
     return (
@@ -18,7 +18,7 @@ const CartView = (() => {
             </div>
             <div>
                 <p>Total:</p>
-                <p>${totalPrice}</p>
+                <p>${PriceTotal()}</p>
                 <div>
                     <button>Finalizar Compra</button>
                 </div>
