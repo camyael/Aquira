@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../context/CartContext"
 import CartProd from "./Cart"
 
@@ -13,7 +14,10 @@ const CartView = (() => {
                 {
                     cartItem.length > 0
                     ? cartItem.map((prod) => (<CartProd key={prod.id} product={prod}/>))
-                    : <p>El carrito está vacío</p>
+                    :   <div>
+                            <p>El carrito está vacío</p>
+                            <Link to="/products">Ir a comprar</Link>
+                        </div>
                 }
             </div>
             <div>
