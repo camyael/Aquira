@@ -9,7 +9,6 @@ const ItemDetail = ({item}) => {
 
     const onAdd = (count) => {
         alert(`Agregaste ${count} productos`);
-    
         addItem(item, count)
     }
 

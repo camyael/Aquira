@@ -8,11 +8,10 @@ const CartContextProvider = ( ({children})  => {
 
     const addItem = (product, count) => {
         if(IsInCart(product.id)) {
-            const index = cartItem.findIndex(item => item.product.id === product.id);
+            const index = cartItem.findIndex(item => item.item.id === product.id);
             cartItem[index].count = cartItem[index].count + count;
             setcartItem([...cartItem]);
         }
-        
         else {
             setcartItem([...cartItem, { ...product, count}])
         }
@@ -27,7 +26,8 @@ const CartContextProvider = ( ({children})  => {
         setcartItem([])
     }
 
-    const IsInCart = (id) => cartItem.some((product) => product.id === id);
+    const IsInCart = (id) => {
+        return cartItem.some((product) => product.id === id);}
 
     const PriceTotal = () => {
         return cartItem.reduce((acc, prod) => acc + (prod.price * prod.count), 0)

@@ -6,14 +6,13 @@ import CartProd from "./Cart"
 const CartView = (() => {
     const { cartItem, clear, PriceTotal } = useContext(CartContext)
 
-    console.log(cartItem)
     return (
         <section className="Cart">
             <div className="cartList">
                 <h2>Your Cart</h2>
                 {
                     cartItem.length > 0
-                    ? cartItem.map((prod) => (<CartProd key={prod.id} product={prod}/>))
+                    ? cartItem.map((prod) => (<CartProd key={prod} product={prod}/>))
                     :   <div>
                             <p>El carrito está vacío</p>
                             <Link to="/products">Ir a comprar</Link>
