@@ -33,7 +33,7 @@ const ItemListContainer = () => {
                 })
     }, [id])  
 
-     if(Load) return (
+    if(Load) return (
          <div className="Loading">
              <Loading/> 
          </div>

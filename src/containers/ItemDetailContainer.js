@@ -2,37 +2,37 @@ import React, { useEffect, useState } from "react"
 import ItemDetail from "../components/ItemDetail"
 import { useParams } from "react-router-dom"
 import Loading from "../components/Loading"
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { doc, getDoc} from "firebase/firestore";
 import { db } from "../utils/firebaseConfig"
 
 const ItemDetailContainer = () => {
     const [productArray, setproductArray] = useState([])
-    const [Load, setLoad] = useState(true)
+    const [Load, setLoad] = useState(false)
     const { id } = useParams()
 
-    // useEffect (() => {
-    //     setLoad(true)
+    useEffect(() => {
+        const pedirDatos = async () => {
+            setLoad(true)
+            const docRef = doc(db, "products", id);
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                setproductArray(docSnap.data());
+                setLoad(false)
+            } else {
+                setLoad(true)
+            }  
+        }
+
+        pedirDatos()
         
-    //     const pedirDatos = async() => {
-    //         let qry 
-    //         if (id) {
-    //             qry = query(collection(db, "products"), where('id', '==', parseInt(id)))
-    //         } else {
-    //             qry = query(collection(db, "products"))
-    //         }
-    //         const querySnapshot = await getDocs(qry);
-    //         const results = querySnapshot.docs.find(item => item. id == parseInt(id)); 
-    //         return results
-    //     }
-    //     pedirDatos()
-    //             .then(resolve => {
-    //                 setproductArray(resolve)
-    //                 setLoad(false)
-    //             })
-    // }, [id])  
+    }, [id])
 
-
-    
+    if(Load) return (
+         <div className="Loading">
+             <Loading/> 
+         </div>
+    )
 
     return (
         <div className="ItemDetail">
