@@ -4,6 +4,7 @@ export const CartContext = createContext();
 
 const CartContextProvider = ( ({children})  => {
     const [ cartItem, setcartItem ] = useState([])
+    const [ prodFirebase, setprodFirebase ] = useState()
 
     const addItem = (product, count) => {
         if(IsInCart(product.id)) {
@@ -46,7 +47,9 @@ const CartContextProvider = ( ({children})  => {
             clear,
             IsInCart,
             PriceTotal,
-            PriceCount}}>
+            PriceCount,
+            prodFirebase,
+            setprodFirebase}}>
             {children}
         </CartContext.Provider>
     )
