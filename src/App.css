@@ -91,6 +91,44 @@ body {
   border-radius: 0 20px 0px 20px;
 }
 
+#Main {
+  background-color: #ede0d468;
+  margin: 80px auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+#Main .text p{
+  color: #3F4757;
+  font-weight: bolder;
+}
+
+#Main .images {
+  display: flex;
+  column-gap: 20px;
+}
+
+#Main .images div {
+  width: 150px;
+  text-align: center;
+}
+
+#Main div img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#Main .images-1 img {
+  margin-top: 20px;
+}
+
+#Main .images-2 img {
+  margin-bottom: 20px;
+}
+
 /* <----- ITEMS -----> */
 
 .ItemList {
