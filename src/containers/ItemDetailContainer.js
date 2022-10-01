@@ -17,7 +17,10 @@ const ItemDetailContainer = () => {
             const docSnap = await getDoc(docRef);
 
             if (docSnap.exists()) {
-                setproductArray(docSnap.data());
+                setproductArray({
+                    id: docSnap.id,
+                    ...docSnap.data()
+                });
                 setLoad(false)
             } else {
                 setLoad(true)
