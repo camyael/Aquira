@@ -9,14 +9,15 @@ const Home = () => {
         <>
             <section id="Home">
                 <div>
-                    <h2>Cuida tu piel</h2>
+                    <p>Cuidados para tu piel</p>
                     <Link to="/products"><button className="Shop-Now">Shop Now</button></Link>
                 </div>           
             </section>
 
             <section id="Main">
                 <div className="text">
-                    <p>Bienvenido a <span>Aquira</span></p>
+                    <img src="https://img.icons8.com/external-victoruler-outline-victoruler/64/7f5539/external-skincare-beauty-cosmetics-victoruler-outline-victoruler.png" alt="icon"/>
+                    <p>Aquira es una empresa importadora de productos para el cuidado de la piel y maquillaje.</p>
                 </div>
                 <div className="images">
                     <div className="images-1">

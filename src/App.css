@@ -61,6 +61,11 @@ body {
   color: #3F4757;
 }
 
+/* <----- FOOTER -----> */
+#footer {
+  background-color: #EDE0D4;
+}
+
 /* <----- HOME -----> */
 
 #Home {
@@ -77,14 +82,17 @@ body {
   padding: 200px 70px 200px 0;
 }
 
-#Home h2 {
+#Home p {
   color: #7F5539;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 #Home .Shop-Now {
   padding: 10px 32px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  font-size: 1rem;
   color: #EDE0D4;
   background-color: #7F5539;
   border: #7F5539;
@@ -93,32 +101,43 @@ body {
 
 #Main {
   background-color: #ede0d468;
-  margin: 80px auto;
-  width: 75%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  padding: 50px 0;
+}
+
+#Main .text {
+  text-align: center;
 }
 
 #Main .text p{
   color: #3F4757;
   font-weight: bolder;
+  width: 605px;
+  padding: 100px 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#Main .text img {
+  padding-top: 150px;
+  width: 60px;
 }
 
 #Main .images {
   display: flex;
-  column-gap: 20px;
+  column-gap: 30px;
 }
 
 #Main .images div {
-  width: 150px;
+  width: 200px;
   text-align: center;
 }
 
 #Main div img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #Main .images-1 img {
