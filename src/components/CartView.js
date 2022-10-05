@@ -51,14 +51,12 @@ const CartView = (() => {
                         </div>
                 }
             </div>
-            <div>
+            <div className="checkout">
                 <p>Total:</p>
                 <p>${PriceTotal()}</p>
                 <div>
-                    <button onClick={createOrder}>Finalizar Compra</button>
-                </div>
-                <div>
                     <button onClick={clear}>Limpiar Carrito</button>
+                    <button onClick={createOrder}>Finalizar Compra</button>
                 </div>
             </div>
         </section>

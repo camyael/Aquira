@@ -307,6 +307,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 0;
+  min-height: 70vh;
 }
 
 .cartList {
@@ -342,8 +343,16 @@ body {
   width: 20px;
 }
 
+.Cart .checkout {
+  text-align: center;
+}
+
 /* <----- LOADING ----> */
 .Loading div{
   margin: 200px auto;
+}
+
+.Loading {
+  min-height: 50vh;
 }
 
