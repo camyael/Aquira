@@ -19,7 +19,6 @@ const NavBar = () => {
                 </div>
                 <div className="navbar">
                     <ul>
-                        <li>Nosotros</li>
                         <li><Link to="/cart"><Cart /></Link></li>
                     </ul>
                 </div>
