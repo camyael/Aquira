@@ -163,6 +163,14 @@ body {
 
 /* <----- ITEMS -----> */
 
+.itemListContainer .nuestrosProductos {
+  color: #3f4757ad;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  text-align: center;
+  padding-top: 30px;
+}
+
 .ItemList {
   display: flex;
   justify-content: center;
@@ -230,7 +238,19 @@ body {
 }
 
 .noStock {
+  text-align: center;
   text-transform: uppercase;
+  font-weight: bolder;
+  color: #7F5539;
+}
+
+.noStock a {
+  color: #7F5539;
+  text-decoration: none;
+}
+
+.noStock:hover a {
+  text-decoration: underline;
 }
 
 .ItemDescription {

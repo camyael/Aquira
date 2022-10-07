@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
                         }
                         <p>Stock: {item.stock}</p>
                         </div>
-                    : <p className="noStock">No hay stock, siga comprando!</p>
+                    : <p className="noStock">No hay stock, siga <a href="/products">comprando</a>!</p>
                 }
             </div>
         </>
