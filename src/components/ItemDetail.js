@@ -22,14 +22,18 @@ const ItemDetail = ({item}) => {
                 <h3 className="ItemDescription">{item.description}</h3>
                 <h4 className="ItemPrice">${item.price}</h4>
 
-                <div className="ProductStock">
                 {
-                    IsInCart(item.id)
-                    ? <Link to="/cart"><button className="goToCart">Finalizar la compra</button></Link>
-                    : <ItemCount stock={item.stock} onAdd={onAdd}/> 
+                    item.stock > 0
+                    ? <div className="ProductStock">
+                        {
+                            IsInCart(item.id)
+                            ? <Link to="/cart"><button className="goToCart">Finalizar la compra</button></Link>
+                            : <ItemCount stock={item.stock} onAdd={onAdd}/> 
+                        }
+                        <p>Stock: {item.stock}</p>
+                        </div>
+                    : <p className="noStock">No hay stock, siga comprando!</p>
                 }
-                <p>Stock: {item.stock}</p>
-                </div>
             </div>
         </>
     )

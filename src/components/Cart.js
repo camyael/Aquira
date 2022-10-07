@@ -18,11 +18,11 @@ const CartProd = ({product}) => {
                     <p>Cantidad: {product.count}</p>
                     <p>Subtotal: ${product.price * product.count}</p>
                 </div>
-            </div>
-            <div className="Cart-Delete" onClick={() => removeItem(product.id)}>
+                <div className="Cart-Delete" onClick={() => removeItem(product.id)}>
                 <button onClick={() => removeItem(product.id)}>
                     <img src="https://img.icons8.com/ios/50/000000/delete-forever--v1.png" alt="delete"/>
                 </button>
+            </div>
             </div>
         </div>
     )

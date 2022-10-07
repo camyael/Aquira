@@ -40,24 +40,32 @@ const CartView = (() => {
 
     return (
         <section className="Cart">
-            <div className="cartList">
+            <div className="yourCart">
+                <img src="https://img.icons8.com/glyph-neue/64/3f4757/shopping-cart.png" alt="cart"/>
                 <h2>Your Cart</h2>
+            </div>
+            <div className="cartList">
                 {
                     cartItem.length > 0
                     ? cartItem.map((prod) => (<CartProd key={prod.id} product={prod}/>))
-                    :   <div>
+                    :   <div className="cartList-Products">
                             <p>El carrito está vacío</p>
                             <Link to="/products">Ir a comprar</Link>
                         </div>
                 }
-            </div>
-            <div className="checkout">
-                <p>Total:</p>
-                <p>${PriceTotal()}</p>
-                <div>
-                    <button onClick={clear}>Limpiar Carrito</button>
-                    <button onClick={createOrder}>Finalizar Compra</button>
-                </div>
+
+                {
+                    cartItem.length > 0
+                    && <div className="checkout">
+                        <p>Total:</p>
+                        <p>${PriceTotal()}</p>
+                        <div>
+                            <button onClick={createOrder} className="checkoutCart">Finalizar Compra</button>
+                                <button onClick={clear} className="clearCart">Limpiar Carrito</button>
+                            </div>
+                        </div>
+                }
+               
             </div>
         </section>
         )
