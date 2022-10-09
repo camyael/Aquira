@@ -4,6 +4,8 @@ import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "../context/CartContext"
 import CartProd from "./Cart"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartView = (() => {
     const { cartItem, clear, PriceTotal } = useContext(CartContext)
@@ -19,16 +21,27 @@ const CartView = (() => {
             buyer: {
                 name: 'Taylor Swift',
                 phone: '117374654',
-                email: 'tswift'
+                email: 'tswift@mail.com'
             },
             date: serverTimestamp(),
             items: dataItems,
             total: PriceTotal()
         }
+        const notify = (order) => {
+            toast(`Su compra ha sido procesada. Su número de orden es ${order}`, {
+                position: "top-center",
+                autoClose: false,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+        }
         
         const orderRef = doc(collection(db, "orders"))
         await setDoc(orderRef, order);
-        alert(`Su compra ha sido procesada. Su número de orden es ${orderRef.id}`)
+        notify(orderRef.id)
         clear()
 
         cartItem.forEach(async(e) => {
@@ -60,7 +73,7 @@ const CartView = (() => {
                 {
                     cartItem.length > 0
                     && <div className="checkout">
-                        <p>Total:</p>
+                        <p className="total">Total</p>
                         <p>${PriceTotal()}</p>
                         <div>
                             <button onClick={createOrder} className="checkoutCart">Finalizar Compra</button>
@@ -68,7 +81,7 @@ const CartView = (() => {
                             </div>
                         </div>
                 }
-               
+               <ToastContainer/>
             </div>
         </section>
         )

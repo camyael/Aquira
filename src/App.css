@@ -376,9 +376,24 @@ body {
 .Cart-Product {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   column-gap: 30px;
+  padding: 10px 0;
+}
+
+.Cart-Item-Info{
+  width: 300px;
+}
+
+.Cart-Item-Info .subtotal-price,
+.Cart-Item-Info .title {
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.Cart-Item-Info .subtotal {
+  font-weight: bolder;
   padding: 10px 0;
 }
 
@@ -400,6 +415,13 @@ body {
   flex-flow: column nowrap;
   align-items: center;
   padding-top: 20px;
+}
+
+.checkout p {
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 5px 0;
+  color: #3F4757
 }
 
 .Cart .checkout div {
