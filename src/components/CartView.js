@@ -81,8 +81,8 @@ const CartView = (() => {
                             </div>
                         </div>
                 }
-               <ToastContainer/>
             </div>
+            <ToastContainer/>
         </section>
         )
 })
