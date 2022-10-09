@@ -2,18 +2,33 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({item}) => {
 
     const { addItem, IsInCart } = useContext(CartContext)
 
+    const notify = (count) => {
+        toast(`Agregaste ${count} producto/s`, {
+            position: "top-center",
+            autoClose: false,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+    }
+
     const onAdd = (count) => {
-        alert(`Agregaste ${count} productos`);
+        notify(count);
         addItem(item, count)
     }
 
     return (
         <>
+            <ToastContainer />
             <div className="pictureURL">
                 <img src={item.pictureURL} alt="product"/>
             </div>

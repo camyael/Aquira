@@ -379,6 +379,7 @@ body {
   justify-content: space-around;
   align-items: center;
   column-gap: 30px;
+  padding: 10px 0;
 }
 
 .Cart-Product img {

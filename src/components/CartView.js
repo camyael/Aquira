@@ -46,6 +46,7 @@ const CartView = (() => {
                 <h2>Your Cart</h2>
             </div>
             <div className="cartList">
+                <div className="cartList-Item">
                 {
                     cartItem.length > 0
                     ? cartItem.map((prod) => (<CartProd key={prod.id} product={prod}/>))
@@ -54,6 +55,7 @@ const CartView = (() => {
                             <Link to="/products">Ir a comprar</Link>
                         </div>
                 }
+                </div>
 
                 {
                     cartItem.length > 0
