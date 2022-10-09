@@ -28,6 +28,7 @@ const CartView = (() => {
         
         const orderRef = doc(collection(db, "orders"))
         await setDoc(orderRef, order);
+        alert(`Su compra ha sido procesada. Su número de orden es ${orderRef.id}`)
         clear()
 
         cartItem.forEach(async(e) => {
