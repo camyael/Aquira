@@ -12,7 +12,7 @@ const ItemDetail = ({item}) => {
     const notify = (count) => {
         toast(`Agregaste ${count} producto/s`, {
             position: "top-center",
-            autoClose: 2000,
+            autoClose: false,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: true,
