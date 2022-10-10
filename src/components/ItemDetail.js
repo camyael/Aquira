@@ -10,7 +10,7 @@ const ItemDetail = ({item}) => {
     const { addItem, IsInCart } = useContext(CartContext)
 
     const notify = (count) => {
-        toast(`Agregaste ${count} producto/s`, {
+        toast.info(`Agregaste ${count} producto/s`, {
             position: "top-center",
             autoClose: 3000,
             hideProgressBar: true,
