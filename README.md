@@ -12,7 +12,7 @@ Aquira es un ___e-commerce___ ficticio, que simula un emprendimiento de ventas d
 
 ## Tecnologías, librerías e íconos
 * React Js
-* Hooks utilizados: useState, useEffect, useContext y useRef.
+* Hooks utilizados: useState, useEffect y useContext
 * React Toastify
 * Icons8
 * Firebase
