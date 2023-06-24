@@ -33,3 +33,7 @@ $ npm start
 ````
 
 La página se volverá a cargar cuando realice cambios.
+
+
+## Autor
+* Camila Villaverde — [LinkedIn](https://www.linkedin.com/in/camilavillaverde/) y [Portfolio](https://camyael.github.io/portfolio/)
